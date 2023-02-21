@@ -1,6 +1,6 @@
 type AppHeaderProps = {
     title: string,
-    year: number
+    year?: number
 }
 function AppHeader({ title, year }: AppHeaderProps) {
     return (
