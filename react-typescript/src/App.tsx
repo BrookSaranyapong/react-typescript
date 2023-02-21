@@ -16,7 +16,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <AppHeader />
+      <AppHeader title='React' year={2022} />
+      <AppHeader title='TypeScript' year={2023} />
       <h1>Hello React+ TypeScript</h1>
 
       <AppFooter />
