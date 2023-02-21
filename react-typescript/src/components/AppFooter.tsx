@@ -1,9 +1,14 @@
+import { useState } from "react";
+
 const AppFooter = () => {
-    const company = 'TypeScript';
+    // let company = 'TypeScript';
+    const [company, setCompany] = useState()
     const isShow = false;
 
     const showMsg = () => {
-        alert('Hello TypeScript');
+        // alert('Hello TypeScript');
+        setCompany("React");
+
     }
 
     return (
