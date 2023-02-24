@@ -8,10 +8,12 @@ import {
     Icon,
     IconProps,
 } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 import homepageStyle from '../styles/homepage.module.css';
 
 
 export default function HomePage() {
+    const navigate = useNavigate();
     return (
         <Container maxW={'5xl'}>
             <Stack
@@ -30,21 +32,24 @@ export default function HomePage() {
                 <Text color={'orange.400'} fontSize={'5xl'}>
                     Room Booking System
                 </Text>
-                <Text color={'gray.500'} maxW={'3xl'}>
-                    Never miss a meeting. Never be late for one too. Keep track of your
-                    meetings and receive smart reminders in appropriate times. Read your
-                    smart “Daily Agenda” every morning.
-                </Text>
+
                 <Stack spacing={6} direction={'row'}>
                     <Button
                         rounded={'full'}
                         px={6}
                         colorScheme={'orange'}
                         bg={'orange.400'}
-                        _hover={{ bg: 'orange.500' }}>
+                        _hover={{ bg: 'orange.500' }}
+
+                        onClick={() => {
+                            navigate('/login');
+                        }}>
                         เข้าสู่ระบบ
                     </Button>
-                    <Button rounded={'full'} px={6}>
+
+                    <Button rounded={'full'} px={6} onClick={() => {
+                        navigate('/about');
+                    }}>
                         เกี่ยวกับเรา
                     </Button>
                 </Stack>
