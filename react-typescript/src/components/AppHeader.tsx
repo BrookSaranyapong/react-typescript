@@ -11,11 +11,11 @@ function AppHeader({ title, year }: AppHeaderProps) {
         console.log("useEffect AppHeader ทำครั้งแรกและทุกครั้งที่ re-render"); // ทำครั้งแรกและทุกครั้งที่ re-render
     });
     useEffect(() => {
-        console.log('use effect AppHeader 2'); // ทำครั้งแรกและครั้งเดียวเท่านั้น
+        console.log('use effect AppHeader 2 ทำครั้งแรกและครั้งเดียวเท่านั้น'); // ทำครั้งแรกและครั้งเดียวเท่านั้น
     }, []);
 
     useEffect(() => {
-        console.log('use effect AppHeader 3'); // ทำครั้งแรกและทำเมื่อ isShow เมื่อมีการ update ค่า 
+        console.log('use effect AppHeader 3 ทำครั้งแรกและทำก็เมื่อต่อเมื่อ isShow อัปเดตค่าเท่านั้น'); // ทำครั้งแรกและทำก็เมื่อต่อเมื่อ isShow อัปเดตค่าเท่านั้น
     }, [isShow]);
 
     const mouseOver = () => {
