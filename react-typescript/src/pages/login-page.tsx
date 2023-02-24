@@ -12,8 +12,10 @@ import {
     Text,
     useColorModeValue,
 } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
+    const navigate = useNavigate();
     return (
         <Flex
             minH={'100vh'}
@@ -56,6 +58,15 @@ export default function LoginPage() {
                                     bg: 'blue.500',
                                 }}>
                                 Sign in
+                            </Button>
+                            <Button
+                                bg={'green.400'}
+                                color={'white'}
+                                _hover={{
+                                    bg: 'blue.500',
+                                }}
+                                onClick={() => { navigate('/') }}>
+                                Return to Pages
                             </Button>
                         </Stack>
                     </Stack>
